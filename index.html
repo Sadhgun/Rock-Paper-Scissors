@@ -5,21 +5,46 @@
     <title></title>
   </head>
   <body>
+    <input class="playerInput" type="text" />
+    <p></p>
     <script type="text/javascript">
+      let player = document.querySelector(".playerInput");
+      let data = document.querySelector("p");
       function computerPlay() {
-        let computer = Math.floor(Math.random()*3)
-        if (computer == 1) {
-          computer = 'Rock';
-        }
-        else if (computer == 2) {
-          computer = 'Paper';
-        }
-        else if (computer == 3) {
-          computer = 'Scissors';
-        }
-        return computer;
+        return Math.floor(Math.random() * 3);
       }
-      console.log(computerPlay());
+      function playRound(computer, player) {
+        if (player == "ROCK") {
+          player = 0;
+        } else if (player == "PAPER") {
+          player = 1;
+        } else if (player == "SCISSORS") {
+          player = 2;
+        }
+        if (computer == 0 && player == 2) {
+          data.textContent = `${computer} beats ${player} Computer wins!`;
+        } else if (computer == 1 && player == 0) {
+          data.textContent = `${computer} beats ${player} Computer wins!`;
+        } else if (computer == 2 && player == 1) {
+          data.textContent = `${computer} beats ${player} Computer wins!`;
+        } else if (player == 0 && computer == 2) {
+          data.textContent = `${computer} beats ${player} Player wins!`;
+        } else if (player == 1 && computer == 0) {
+          data.textContent = `${computer} beats ${player} Player wins!`;
+        } else if (player == 2 && computer == 1) {
+          data.textContent = `${computer} beats ${player} Player wins!`;
+        } else if (player == computer) {
+          data.textContent = "It's a Tie!";
+        }
+      }
+      function game() {
+        for (var i = 0; i < 5; i++) {
+          player.onchange = function() {
+            playRound(computerPlay(), player.value.toUpperCase());
+          };
+        }
+      }
+      game();
     </script>
   </body>
 </html>
