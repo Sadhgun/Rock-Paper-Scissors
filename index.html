@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function computerPlay() {
+        let computer = Math.floor(Math.random()*3)
+        if (computer == 1) {
+          computer = 'Rock';
+        }
+        else if (computer == 2) {
+          computer = 'Paper';
+        }
+        else if (computer == 3) {
+          computer = 'Scissors';
+        }
+        return computer;
+      }
+      console.log(computerPlay());
+    </script>
+  </body>
+</html>
