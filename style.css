@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffe1d2;
+}
+
+.title {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    color: #FFA276;
+    background-color: rgb(255, 120, 57);
+}
+
+.scoreBoard {
+    text-align: center;
+    margin-left: 30vw;
+    margin-top: 5vh;
+}
+
+th, td {
+    border: 5px solid #FFA276;
+    font-size: 25px;
+    width: 20vw;
+    color: #FFA276;
+}
+
+img {
+    width: 15vw;
+    height: auto;
+}
+
+.buttons {
+    text-align: center;
+    margin: 5vh 20vh 5vh 20vh;
+}
+
+.cpuMove {
+    margin: 5vh 2.5vh 0 2.5vh;
+}
+
+button {
+    padding: 0;
+    border-radius: 100px;
+    margin: 5vh 2.5vh 0 2.5vh;
+    outline: none;
+}
+
+.invisible td {
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding-top: 2px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    color: #FFA276;
+    background-color: rgb(255, 120, 57);
+}
+
+a {
+    background-color: rgb(255, 120, 57);
+    color: #FFA276;
+}

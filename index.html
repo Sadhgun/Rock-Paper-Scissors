@@ -1,68 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Rock Paper Scissors</title>
-    <script type="text/javascript">
-      let ties = 0;
-      let computerWins = 0;
-      let playerWins = 0;
-      function computerPlay() {
-        computer = Math.floor(Math.random() * 3);
-        if (computer == 0) {
-          computer = "ROCK";
-        } else if (computer == 1) {
-          computer = "PAPER";
-        } else if (computer == 2) {
-          computer = "SCISSORS";
-        }
-        return computer;
-      }
-
-      function playRound(computer, player) {
-        if (computer == "ROCK" && player == "SCISSORS") {
-          console.log(`${computer} beats ${player} Computer wins!`);
-          computerWins++;
-        } else if (computer == "PAPER" && player == "ROCK") {
-          console.log(`${computer} beats ${player} Computer wins!`);
-          computerWins++;
-        } else if (computer == "SCISSORS" && player == "PAPER") {
-          console.log(`${computer} beats ${player} Computer wins!`);
-          computerWins++;
-        } else if (player == "ROCK" && computer == "SCISSORS") {
-          console.log(`${player} beats ${computer} Player wins!`);
-          playerWins++;
-        } else if (player == "PAPER" && computer == "ROCK") {
-          console.log(`${player} beats ${computer} Player wins!`);
-          playerWins++;
-        } else if (player == "SCISSORS" && computer == "PAPER") {
-          console.log(`${player} beats ${computer} Player wins!`);
-          playerWins++;
-        } else if (player == computer) {
-          console.log("It's a Tie!");
-          ties++;
-        }
-      }
-
-      function game() {
-        for (let i = 0; i < 5; i++) {
-          let player = prompt("Rock, Paper or Scissors?");
-          playRound(computerPlay(), player.toUpperCase());
-        }
-        console.log("Computer won ", computerWins, "times!");
-        console.log("You won ", playerWins, "times!");
-        if (ties > 0) {
-          console.log(`There were ${ties} ties.`);
-        }
-        if (computerWins > playerWins) {
-          console.log(`You lost the game. Refresh the webpage to play again!`);
-        } else {
-          console.log(`You won the game. Refresh the webpage to play again!`);
-        }
-      }
-
-      game();
-    </script>
-  </head>
-  <body></body>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='style.css'>
+  <script src='game.js' defer></script>
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <div class='content'>
+    <h1 class='title'>Rock Paper Scissors</h1>
+    <div class="scoreBoard">
+      <table>
+        <tr>
+          <th>You</th>
+          <th>CPU</th>
+        </tr>
+        <tr>
+          <td id='player-score'>0</td>
+          <td id='cpu-score'>0</td>
+        </tr>
+      </table>
+    </div>
+    <div class='buttons'>
+      <table>
+        <tr>
+          <th colspan="3">You</th>
+          <th>CPU</th>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <button id='rock'><img src='rock.png' alt='Rock'></button>
+            <button id='paper'><img src='paper.png' alt='Paper'></button>
+            <button id='scissors'><img src='scissors.png' alt='Scissors'></button>
+          </td>
+          <td>
+            <img src='scissors.png' id='cpuMove'>
+          </td>
+        </tr>
+        <tr class="invisible">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <footer>
+    Made by Sadhgun Sobti
+    <br>
+    Check me out at
+    <a href="http://github.com/Sadhgun" target="_blank" rel="noopener noreferrer">Github</a>
+    <br>
+    Or send me an <a href="mailto:sadhgunsobti@gmail.com">email</a>
+  </footer>
+</body>
 </html>
