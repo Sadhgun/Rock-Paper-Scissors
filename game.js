@@ -11,9 +11,15 @@ const theme = document.querySelector('.theme')
 const blue = document.getElementById('blue')
 const orange = document.getElementById('orange')
 const html = document.getElementsByTagName('html')[0]
+const custom = document.getElementById('customChooser')
 
 let cpuScore = 0;
 let playerScore = 0;
+
+menu.onclick = function () {
+    theme.classList.toggle('theme-active')
+    theme.classList.toggle('theme')
+}
 
 orange.onclick = function () {
     html.style.setProperty('--darkestColor', 'rgb(255, 120, 57)');
@@ -27,7 +33,10 @@ blue.onclick = function () {
     html.style.setProperty('--lightestColor', 'rgb(210, 222, 255)');
 }
 
-menu.onclick = function () {
+custom.onclick = function () {
+    html.style.setProperty('--lightestColor', document.getElementById('lightestColor').value);
+    html.style.setProperty('--midColor', document.getElementById('midColor').value);
+    html.style.setProperty('--darkestColor', document.getElementById('darkestColor').value);
     theme.classList.toggle('theme-active')
     theme.classList.toggle('theme')
 }

@@ -16,8 +16,24 @@
     </div>
     <h1 class='title'>Rock Paper Scissors</h1>
     <div class='theme' theme>
-      <input type='image' src='orange.png' alt='Orange' id='orange'>
-      <input type='image' src='blue.png' alt='BLue' id='blue'>
+      <div class="premade">
+        <h2>Choose a different theme from below!</h2>
+        <button id='orange'>Orange</button>
+        <button id='blue'>Blue</button>
+      </div>
+      <div class="custom">
+        <h2>Or make your own</h2>
+        <div class="labels">
+          <br>
+          <h3>Background Color</h3>
+          <h3>Text Color</h3>
+          <h3>Accent Color</h3>
+        </div>
+        <input type="color" id="lightestColor">
+        <input type="color" id="midColor">
+        <input type="color" id="darkestColor">
+        <button id='customChooser'>Go</button>
+      </div>
     </div>
     <div class='scoreBoard'>
       <table>
