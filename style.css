@@ -5,16 +5,42 @@
     background-color: var(--lightestColor);
 }
 
-:root {
+html {
     --darkestColor: rgb(255, 120, 57);
     --midColor: rgb(255, 162, 118);
     --lightestColor: rgb(255, 225, 210);
 }
 
+#menu {
+    float: left;
+    background-color: var(--darkestColor);
+}
+
+.line1 {
+    width: 40px;
+    height: 3px;
+    background-color: var(--midColor);
+    margin: 28px 0 0 15px;
+}
+
+.line2 {
+    width: 40px;
+    height: 3px;
+    background-color: var(--midColor);
+    margin: 5px 0 0 15px;
+}
+
+.line3 {
+    width: 40px;
+    height: 3px;
+    background-color: var(--midColor);
+    margin: 5px 0 0 15px;
+}
+
 .title {
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
     font-size: 50px;
     font-weight: bold;
     font-family: monospace;
@@ -22,16 +48,38 @@
     background-color: var(--darkestColor);
 }
 
+.theme {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--darkestColor);
+    display: none;
+}
+
+.theme-active {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--darkestColor);
+    display: block;
+}
+
 .scoreBoard {
     text-align: center;
     margin-left: 30vw;
-    margin-top: 5vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+#declaration {
+    color: var(--midColor);
+    text-align: center;
+    font-size: 25px;
+
 }
 
 .buttons table{
     width: 80vw;
     text-align: center;
-    margin: 5vh 10vw 5vh 10vw;
+    margin: 2.5vh 10vw 5vh 10vw;
 }
 
 th, td {
@@ -81,3 +129,4 @@ a {
     background-color: var(--darkestColor);
     color: var(--midColor);
 }
+
