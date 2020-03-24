@@ -13,8 +13,8 @@
 
 .title {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 50px;
     font-weight: bold;
     font-family: monospace;
@@ -49,12 +49,12 @@ img {
 }
 
 .cpuMove {
-    margin: 5vh 2.5vh 0 2.5vh;
+    margin: 5vh 2.5vw 0 2.5vw;
 }
 
 input {
     border-radius: 100px;
-    margin: 3vh 2.5vh 3vh 2.5vh;
+    margin: 3vh 2vw 3vh 2vw;
     outline: none;
     width: 15vw;
     height: auto;
