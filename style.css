@@ -32,6 +32,8 @@ th, td {
 img {
     width: 15vw;
     height: auto;
+    background-color: rgb(255, 120, 57);
+    border-radius: 7.5vw;
 }
 
 .buttons {
@@ -43,11 +45,14 @@ img {
     margin: 5vh 2.5vh 0 2.5vh;
 }
 
-button {
-    padding: 0;
+input {
     border-radius: 100px;
-    margin: 5vh 2.5vh 0 2.5vh;
+    margin: 3vh 2.5vh 3vh 2.5vh;
     outline: none;
+    width: 15vw;
+    height: auto;
+    background-color: rgb(255, 120, 57);
+    border-radius: 7.5vw;
 }
 
 .invisible td {
