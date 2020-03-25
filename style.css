@@ -79,6 +79,19 @@ input[type='button'] {
     height: 4vh;
 }
 
+.labels {
+    text-align: center;
+    display: flex;
+    margin-top: 0;
+    background-color: var(--darkestColor);
+    color: var(--midColor);
+}
+
+h3 {
+    margin: 0 2.5vw 0 2.5vw;
+    background-color: var(--darkestColor);
+}
+
 @media screen and (max-width: 1000px) {
     .theme-active {
             height: 35vh;
@@ -95,6 +108,10 @@ input[type='button'] {
     input[type='color'] {
         width: 25vw;
     }
+
+    .h3 {
+        margin: 0;
+    }
 }
 
 .title {
@@ -105,19 +122,6 @@ input[type='button'] {
     font-weight: bold;
     font-family: monospace;
     color: var(--midColor);
-    background-color: var(--darkestColor);
-}
-
-.labels {
-    text-align: center;
-    display: flex;
-    margin-top: 0;
-    background-color: var(--darkestColor);
-    color: var(--midColor);
-}
-
-h3 {
-    margin: 0 2.5vw 0 2.5vw;
     background-color: var(--darkestColor);
 }
 
